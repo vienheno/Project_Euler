@@ -1,8 +1,27 @@
 #include <iostream>
 #include <iomanip>
-#include <locale>
 #include <string>
 using namespace std;
+
+int num_max (int a, int b) {
+    int n_max = 0;
+    if (a > b) n_max = a;
+    else n_max = b;
+
+    return n_max;
+}
+
+int suma_maxima (int matrix [15][15]) {
+    int a, b, suma_final;
+    for (int i = 13; i >= 0; i--) {
+        for (int j = 0; j <= i ; j++) {
+            a = matrix[i][j] + matrix[i+1][j];
+            b = matrix[i][j] + matrix[i+1][j+1];
+            matrix [i][j] = num_max (a, b);
+        }
+    }
+    return matrix[0][0];
+}
 
 int main() {
 setlocale(LC_ALL, "es_ES.UTF-8");
@@ -26,9 +45,7 @@ int triangular [15][15] = {
     {4, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 4, 23},
 };
 
-
-
-    
+    cout <<"La suma máxima es: "<<suma_maxima(triangular)<<endl<<endl;
 
     return 0;
 }
