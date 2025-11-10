@@ -23,7 +23,7 @@ bool numerosAmistosos (int numero_a) {
 
 int main() {
 setlocale(LC_ALL, "es_ES.UTF-8");
-system("cls");
+system("clear");
 
     int sumaAmistosos = 0, numero_a = 10000;
 
@@ -31,5 +31,6 @@ system("cls");
     
     cout<<"La suma de los números amistosos menores a "<<numero_a<<" es igual a: "<<sumaAmistosos<<endl<<endl;
 
-    return 0;
+    return 0; 
+    
 }

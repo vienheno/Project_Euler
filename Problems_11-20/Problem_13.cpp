@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
     setlocale(LC_ALL, "es_ES.UTF-8");
-    system("cls");
+    system("clear");
 
     // Arreglo de 100 números grandes
     string A_numeros[100] = {
@@ -124,7 +124,7 @@ int main() {
         suma = suma + numero;
     }
     suma10 = to_string(suma).substr(0,10);
-    cout <<suma10;
+    cout <<suma10<< endl;
 
     return 0;
 }
